@@ -20,7 +20,8 @@ $config
     // Adjusting scanned paths
     ->addPathToScan(__DIR__ . '/src', isDev: false)
     ->addPathToScan(__DIR__ . '/vendor', isDev: false)
-    ->addPathToExclude(__DIR__ . '/vendor/rector/rector/vendor')
+    ->addPathToExclude(__DIR__ . '/vendor/rector/rector')
+    ->addPathToExclude(__DIR__ . '/vendor/phpstan/phpstan')
     // applies only to directory scanning, not directly listed files
     ->setFileExtensions(['php'])
 
@@ -33,6 +34,7 @@ $config
     // do not complain about some modules
     ->ignoreErrorsOnPackage('mimmi20/coding-standard', [ErrorType::UNUSED_DEPENDENCY])
     ->ignoreErrorsOnPackage('phpstan/extension-installer', [ErrorType::UNUSED_DEPENDENCY])
+    ->ignoreErrorsOnPackage('phpstan/phpstan-deprecation-rules', [ErrorType::UNUSED_DEPENDENCY])
 
     // Adjust analysis
     // dev packages are often used only in CI, so this is not enabled by default
