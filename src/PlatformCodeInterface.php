@@ -19,7 +19,7 @@ interface PlatformCodeInterface
     public function hasPlatformCode(string $value): bool;
 
     /**
-     * @return non-empty-string | null
+     * @return non-empty-string|null
      *
      * @throws void
      */

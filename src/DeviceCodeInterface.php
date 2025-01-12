@@ -19,7 +19,7 @@ interface DeviceCodeInterface
     public function hasDeviceCode(string $value): bool;
 
     /**
-     * @return non-empty-string | null
+     * @return non-empty-string|null
      *
      * @throws void
      */

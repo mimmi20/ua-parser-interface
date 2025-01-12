@@ -19,7 +19,7 @@ interface ClientCodeInterface
     public function hasClientCode(string $value): bool;
 
     /**
-     * @return non-empty-string | null
+     * @return non-empty-string|null
      *
      * @throws void
      */
