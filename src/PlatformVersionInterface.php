@@ -13,15 +13,13 @@ declare(strict_types = 1);
 
 namespace UaParser;
 
+use BrowserDetector\Version\VersionInterface;
+
 interface PlatformVersionInterface
 {
     /** @throws void */
     public function hasPlatformVersion(string $value): bool;
 
-    /**
-     * @return non-empty-string|null
-     *
-     * @throws void
-     */
-    public function getPlatformVersion(string $value, string | null $code = null): string | null;
+    /** @throws void */
+    public function getPlatformVersion(string $value, string | null $code = null): VersionInterface;
 }
