@@ -21,7 +21,8 @@
   },
   "require": {
     "php": "~8.4.0 || ~8.5.0",
-    "ext-mbstring": "*"
+    "ext-mbstring": "*",
+    "mimmi20/browser-detector-versioninterface": "^1.0.0"
   },
   "require-dev": {
     "ext-ctype": "*",
