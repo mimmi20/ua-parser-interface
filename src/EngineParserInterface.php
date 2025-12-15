@@ -13,6 +13,8 @@ declare(strict_types = 1);
 
 namespace UaParser;
 
+use UaData\EngineInterface;
+
 interface EngineParserInterface
 {
     /**
@@ -20,5 +22,5 @@ interface EngineParserInterface
      *
      * @throws void
      */
-    public function parse(string $useragent): string;
+    public function parse(string $useragent): EngineInterface;
 }

@@ -14,6 +14,7 @@ declare(strict_types = 1);
 namespace UaParser;
 
 use BrowserDetector\Version\VersionInterface;
+use UaData\EngineInterface;
 
 interface EngineVersionInterface
 {
@@ -22,4 +23,7 @@ interface EngineVersionInterface
 
     /** @throws void */
     public function getEngineVersion(string $value, string | null $code = null): VersionInterface;
+
+    /** @throws void */
+    public function getEngineVersionWithEngine(string $value, EngineInterface $engine): VersionInterface;
 }

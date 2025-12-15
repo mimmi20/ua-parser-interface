@@ -14,6 +14,7 @@ declare(strict_types = 1);
 namespace UaParser;
 
 use BrowserDetector\Version\VersionInterface;
+use UaData\OsInterface;
 
 interface PlatformVersionInterface
 {
@@ -22,4 +23,7 @@ interface PlatformVersionInterface
 
     /** @throws void */
     public function getPlatformVersion(string $value, string | null $code = null): VersionInterface;
+
+    /** @throws void */
+    public function getPlatformVersionWithOs(string $value, OsInterface $os): VersionInterface;
 }
