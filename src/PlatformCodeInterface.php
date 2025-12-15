@@ -13,15 +13,13 @@ declare(strict_types = 1);
 
 namespace UaParser;
 
+use UaData\OsInterface;
+
 interface PlatformCodeInterface
 {
     /** @throws void */
     public function hasPlatformCode(string $value): bool;
 
-    /**
-     * @return non-empty-string|null
-     *
-     * @throws void
-     */
-    public function getPlatformCode(string $value, string | null $derivate = null): string | null;
+    /** @throws void */
+    public function getPlatformCode(string $value, string | null $derivate = null): OsInterface;
 }

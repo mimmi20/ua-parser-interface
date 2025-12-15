@@ -13,15 +13,13 @@ declare(strict_types = 1);
 
 namespace UaParser;
 
+use UaData\EngineInterface;
+
 interface EngineCodeInterface
 {
     /** @throws void */
     public function hasEngineCode(string $value): bool;
 
-    /**
-     * @return non-empty-string|null
-     *
-     * @throws void
-     */
-    public function getEngineCode(string $value): string | null;
+    /** @throws void */
+    public function getEngineCode(string $value): EngineInterface;
 }
