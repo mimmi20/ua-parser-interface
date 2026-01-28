@@ -14,6 +14,7 @@ declare(strict_types = 1);
 namespace UaParser;
 
 use BrowserDetector\Version\VersionInterface;
+use Deprecated;
 use UaData\EngineInterface;
 
 interface EngineVersionInterface
@@ -22,6 +23,7 @@ interface EngineVersionInterface
     public function hasEngineVersion(string $value): bool;
 
     /** @throws void */
+    #[Deprecated(message: 'use getEngineVersionWithEngine() instead', since: '5.0.2')]
     public function getEngineVersion(string $value, string | null $code = null): VersionInterface;
 
     /** @throws void */
